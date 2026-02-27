@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dsyfep1odrxje"]
+
+[ext_resource type="PackedScene" uid="uid://ds60n6krsavle" path="res://scenes/Ground.tscn" id="1_elqb8"]
+
+[node name="Root" type="Node2D" unique_id=918599496]
+
+[node name="Ground" parent="." unique_id=673580990 instance=ExtResource("1_elqb8")]
+position = Vector2(296, 324)
+
+[node name="Ground2" parent="." unique_id=1551337937 instance=ExtResource("1_elqb8")]
+position = Vector2(856, 324)
+
+[node name="Ground3" parent="." unique_id=1648397147 instance=ExtResource("1_elqb8")]
+position = Vector2(576, 394)
