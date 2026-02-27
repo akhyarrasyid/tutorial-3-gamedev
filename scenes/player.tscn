@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://dvlyhuf4uyjqv"]
+
+[ext_resource type="Texture2D" uid="uid://dqe3xcii54qm" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_idle.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://ccnt6deyykprd" path="res://scenes/Player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://hishai7o75wc" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_action1.png" id="3_qfm1y"]
+[ext_resource type="Texture2D" uid="uid://cpl1pmikuwn4q" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_action2.png" id="4_fulsm"]
+[ext_resource type="Texture2D" uid="uid://cdytwp7w2ji11" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_climb1.png" id="5_4r5pv"]
+[ext_resource type="Texture2D" uid="uid://in02byqme80e" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_back.png" id="5_a38lo"]
+[ext_resource type="Texture2D" uid="uid://d1f7n4pxd6c1r" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_cheer1.png" id="6_4ni07"]
+[ext_resource type="Texture2D" uid="uid://cpbsdn46y156" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_climb2.png" id="6_60mlk"]
+[ext_resource type="Texture2D" uid="uid://frwcqhlecb58" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_duck.png" id="7_i4ail"]
+[ext_resource type="Texture2D" uid="uid://2ji7p3i8cf5k" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_cheer2.png" id="7_l71n6"]
+[ext_resource type="Texture2D" uid="uid://bn05fp5xk20uh" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_slide.png" id="8_a38lo"]
+[ext_resource type="Texture2D" uid="uid://wd5e66o8xb3j" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_fall.png" id="9_4ni07"]
+[ext_resource type="Texture2D" uid="uid://dllgaisyr4hk6" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_hurt.png" id="10_l71n6"]
+[ext_resource type="Texture2D" uid="uid://4llywo7pd8pp" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_jump.png" id="11_ke2ow"]
+[ext_resource type="Texture2D" uid="uid://cpv0qxx81v0m3" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_walk1.png" id="12_ujl30"]
+[ext_resource type="Texture2D" uid="uid://c0oji5em2e0n2" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_walk2.png" id="13_31cv2"]
+[ext_resource type="Texture2D" uid="uid://5m57nsq2kdoi" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_skid.png" id="14_pf23h"]
+[ext_resource type="Texture2D" uid="uid://domexwsfwclut" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_swim1.png" id="15_dt7fs"]
+[ext_resource type="Texture2D" uid="uid://cjanh602mjl4d" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_swim2.png" id="16_wqfne"]
+[ext_resource type="Texture2D" uid="uid://dpnqfmjtbn126" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_hang.png" id="17_wnwbv"]
+[ext_resource type="Texture2D" uid="uid://dabdx15lfberv" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_stand.png" id="18_ke2ow"]
+[ext_resource type="Texture2D" uid="uid://caosi1stehdxg" path="res://assets/kenney_platformercharacters/PNG/Player/Poses/player_talk.png" id="21_ujl30"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a38lo"]
+radius = 40.5
+height = 103.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qfm1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fulsm")
+}],
+"loop": false,
+"name": &"action",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_a38lo")
+}],
+"loop": false,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4ni07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l71n6")
+}],
+"loop": true,
+"name": &"cheer",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4r5pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_60mlk")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_i4ail")
+}],
+"loop": false,
+"name": &"crouch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_a38lo")
+}],
+"loop": false,
+"name": &"dash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_4ni07")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_l71n6")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3vyb7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ke2ow")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ujl30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_31cv2")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_pf23h")
+}],
+"loop": false,
+"name": &"skid",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_ke2ow")
+}],
+"loop": false,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_dt7fs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_wqfne")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_ujl30")
+}],
+"loop": false,
+"name": &"talk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_wnwbv")
+}],
+"loop": false,
+"name": &"wall_slide",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=151649746]
+script = ExtResource("1_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=863028074]
+shape = SubResource("CapsuleShape2D_a38lo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1119142220]
+sprite_frames = SubResource("SpriteFrames_g2els")
+animation = &"action"

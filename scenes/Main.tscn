@@ -1,14 +1,56 @@
 [gd_scene format=3 uid="uid://dsyfep1odrxje"]
 
 [ext_resource type="PackedScene" uid="uid://ds60n6krsavle" path="res://scenes/Ground.tscn" id="1_elqb8"]
+[ext_resource type="PackedScene" uid="uid://dvlyhuf4uyjqv" path="res://scenes/player.tscn" id="1_rvslj"]
+[ext_resource type="Texture2D" uid="uid://b5i477id3xiv1" path="res://assets/kenney_platformer-pack-redux/PNG/Backgrounds/blue_land.png" id="2_0bbpv"]
+[ext_resource type="Texture2D" uid="uid://caqaxjnmskd6s" path="res://assets/kenney_platformer-pack-redux/PNG/Backgrounds/blue_grass.png" id="2_vcsgt"]
+[ext_resource type="Texture2D" uid="uid://bssb1obtkvdjx" path="res://assets/kenney_platformer-pack-redux/PNG/Backgrounds/colored_grass.png" id="3_c01mt"]
 
 [node name="Root" type="Node2D" unique_id=918599496]
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=122878734]
+
+[node name="BGLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1041970521]
+motion_scale = Vector2(0.05, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BGLayer" unique_id=1209641206]
+position = Vector2(576.5, 320.5)
+scale = Vector2(1.1240234, 0.6279297)
+texture = ExtResource("2_0bbpv")
+
+[node name="MidLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1204186114]
+motion_scale = Vector2(0.2, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/MidLayer" unique_id=581807900]
+position = Vector2(580.5, 321.99997)
+scale = Vector2(1.1240236, 0.6308593)
+texture = ExtResource("2_vcsgt")
+
+[node name="FGLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1574797969]
+motion_scale = Vector2(0.5, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/FGLayer" unique_id=838845042]
+position = Vector2(576, 320.5)
+scale = Vector2(1.125, 0.62402344)
+texture = ExtResource("3_c01mt")
+
 [node name="Ground" parent="." unique_id=673580990 instance=ExtResource("1_elqb8")]
-position = Vector2(296, 324)
+position = Vector2(292, 482)
 
 [node name="Ground2" parent="." unique_id=1551337937 instance=ExtResource("1_elqb8")]
-position = Vector2(856, 324)
+position = Vector2(854, 483)
+
+[node name="Ground4" parent="." unique_id=1408376130 instance=ExtResource("1_elqb8")]
+position = Vector2(929, 411)
+
+[node name="Ground5" parent="." unique_id=1604521170 instance=ExtResource("1_elqb8")]
+position = Vector2(491, 289)
+
+[node name="Ground6" parent="." unique_id=1784109993 instance=ExtResource("1_elqb8")]
+position = Vector2(283, 217)
 
 [node name="Ground3" parent="." unique_id=1648397147 instance=ExtResource("1_elqb8")]
-position = Vector2(576, 394)
+position = Vector2(571, 553)
+
+[node name="Player" parent="." unique_id=151649746 instance=ExtResource("1_rvslj")]
+position = Vector2(170, 388)
